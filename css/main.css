@@ -154,7 +154,6 @@ input{
     float:left;
     position:relative;
     top:181px;
-    overflow:scroll;
 }
 
 div[id^=abc_container_]{
