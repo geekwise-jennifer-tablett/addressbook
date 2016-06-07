@@ -49,4 +49,4 @@ var update_contact = function(){
         //     get_element('right_input_2').value = company_name;
         // }else{
         //     get_element('right_input_2').value = get_element('right_input_2').value;
-        // };
+
