@@ -72,30 +72,6 @@ var update_contact = function(){
     });
 };
 
-<<<<<<< HEAD
-// ***greyed out line 6-26: the if statement was not working as expected in the above done button handler
-        
-        // var first_name = prompt('Please enter first name','E.g. Imageek');
-        // var last_name = prompt('Please enter last name','E.g. Forlife');
-        // var company_name = prompt('Please enter company name','E.g. Geekwise');
-
-        // if(get_element('right_input_0').value === ''){
-        //     get_element('right_input_0').value = first_name;
-        // }else{
-        //     get_element('right_input_0').value = get_element('right_input_0').value;
-        // };
-        
-        // if(get_element('right_input_1').value === ''){
-        //     get_element('right_input_1').value = last_name;
-        // }else{
-        //     get_element('right_input_1').value = get_element('right_input_1').value;
-        // };
-        
-        // if(get_element('right_input_2').value === ''){
-        //     get_element('right_input_2').value = company_name;
-        // }else{
-        //     get_element('right_input_2').value = get_element('right_input_2').value;
-=======
 var click_on_first_name_field = function(){
     first_name_field.addEventListener('keydown',function(event){
         for(var i=0; i<500; i++){
@@ -114,6 +90,4 @@ var click_on_first_name_field = function(){
 
 
 
-
->>>>>>> dae9f62921640809d28ecc396af0c85904dad7c9
 
