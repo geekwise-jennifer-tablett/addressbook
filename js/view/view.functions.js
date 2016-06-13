@@ -67,7 +67,8 @@ var add_text_content = function (){
 /**alphabetical letters for the abc containers*/
     var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var split_alphabet = alphabet.split('');
-    
+
+
 /**create the left side letters and containers for the contacts*/ 
 var create_abc_containers = function(){
     for(var i=0; i<26; i++){
@@ -78,7 +79,12 @@ var create_abc_containers = function(){
         letter_container.setAttribute('class','fixed_header');
         letter_container.textContent = split_alphabet[i];
         
+        var holder_container = document.createElement('p');
+        holder_container.setAttribute('id','holder');
+        
+        abc_container.appendChild(holder_container);
         abc_container.appendChild(letter_container); 
+        
     };
 };
 
@@ -217,3 +223,27 @@ var click_to_add_phone = function(){
         };
     });
 };
+
+    /**
+    *click function:delete main_label_container
+    */
+    var delete_main_label_container = function(){
+        minus_container_.addEventListener('click',function(event){});
+    
+         for(var i=0; i<get_element('minus_container_0').childElementCount; i++){
+        get_element('main_label_container'+i).style.display = 'none';
+    }
+        
+        
+    };
+    
+    
+    
+    
+    
+   
+        
+    
+  
+    
+    

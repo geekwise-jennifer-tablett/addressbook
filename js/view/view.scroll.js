@@ -7,7 +7,7 @@ var sticky_header=function(){
     for(i=0;i<fixed_heads.length;i++){
         var header=fixed_heads[i];
         var next_header=fixed_heads[i+1];
-        var holder=getPrevNext(header)[0];  
+        var holder=getPrevNext(header)[0];
         if(window.pageYOffset>findPosY(holder)){
         
         /**
@@ -39,7 +39,7 @@ var sticky_header=function(){
                     
                     holder.style.height=header.offsetHeight+'px';
                     header.style.position="fixed";
-                    header.style.top="0px";
+                    header.style.top="181px";
                 }
                 
             }
