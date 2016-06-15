@@ -410,14 +410,10 @@ div[id^=chevron_container_]{
 
 /*testing for delete button*/
 #phone_delete_button{
-    width: 15%;
-    height: 60%;
-    margin-top: 2%;
+    width: 2rem;
+    height: 2rem;
     border-radius: 10px;
-    border: none;
-    text-align: center;
-    font-size: 2rem;
-    color: #0D7CE3;
+    border:1px solid red;
 }
 
 #green_plus_container_2,
