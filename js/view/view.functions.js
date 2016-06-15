@@ -150,6 +150,10 @@ var create_label_containers = function(label_type){
         create_containers('div','label_and_input_right_container_'+i,get_element('main_label_container_'+i));
         
         create_containers('input','phone_input_'+i,get_element('label_and_input_right_container_'+i));
+       
+        /**create delete button for phone input*/
+       create_containers('div','phone_delete_button',get_element('label_and_input_right_container_'+i));
+       get_element('phone_delete_button').textContent = 'Delete';
         
         create_containers('div','minus_container_'+i,get_element('label_and_input_left_container_'+i));
         create_containers('div','label_container_'+i,get_element('label_and_input_left_container_'+i));
@@ -174,7 +178,17 @@ var display_none_main_label_container = function(){
         get_element('main_label_container_'+i).style.display = 'none';
     };
 };
-
+/**  when phone_number input field is clicked, it's width will decrease, float to left and display delete button*/
+// var click_phone_input = function(){
+//         get_element('phone_input').addEventListener('click', function(){
+//             get_element('phone_input_'+i).style.left = '13%';
+            
+            
+            
+            
+//             get_element('phone_delete').style.display = 'inline-block';
+//         });
+//     };
 /** create click event to display containers for adding more information*/
 var click_to_add_phone = function(){
     var click = 0;
@@ -217,21 +231,6 @@ var click_to_add_phone = function(){
         };
     });
 };
-
-
-
-/**  when phone_number input field is clicked, it's width will decrease, float to left and display delete button*/
-// var click_phone_input = function(){
-//         get_element('phone_input').addEventListener('click', function(){
-//             get_element('phone_input_'+i).style.left = '13%';
-            
-            
-            
-            
-//             get_element('phone_delete').style.display = 'inline-block';
-//         });
-//     };
-
 
 var adjust_textarea = function(){
     

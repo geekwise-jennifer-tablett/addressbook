@@ -130,9 +130,9 @@ create_containers('div','right_input_section_container_div',get_element('second_
     
     get_element('note_container').setAttribute('placeholder','Note');
     
-    /**create delete button for phone input*/
-    create_containers('div','phone_delete_button',get_element('label_and_input_right_container'));
-   get_element('phone_delete_button').textContent = 'Delete';
+    /** testing to create delete button for phone input*/
+//     create_containers('div','phone_delete_button',get_element('add_other_info_container'));
+//   get_element('phone_delete_button').textContent = 'Delete';
    
    click_phone_input();
     
