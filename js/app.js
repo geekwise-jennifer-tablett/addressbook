@@ -35,7 +35,7 @@ var load = function(url,callback){
 /**  When DOM is loaded, call load function to create script tags in the head tag*/
 document.addEventListener('DOMContentLoaded',function(event){
     
-    load('controller.js',function(){
+    load('controller/controller.js',function(){
         
     });
     
@@ -51,9 +51,13 @@ document.addEventListener('DOMContentLoaded',function(event){
         
     });
     
+    load('view/view.js',function() {
+        
+    });
+    
     load('view/view.update.js',function() {
-        update_contact();
-        click_on_first_name_field();
+        update_contact(); // when DONE button is clicked
+        click_on_first_name_field(); // Done button color change when first, last, and company fields are not empty
     });
     
     load('view/view.scroll.js',function() {
@@ -61,7 +65,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     });
     
     load('view/view.search.js',function() {
-        
+        search_filter();
     });
     
     // === may use this when refactoring handler functions === //
@@ -78,9 +82,9 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     });
     
-    load('controller/create-name-containers.js',function() {
-    // function greyed out, not used (sample only):    create_name_containers();
-    });
+    // load('controller/create-name-containers.js',function() {
+    // // function greyed out, not used (sample only):    create_name_containers();
+    // });
     
 });
 

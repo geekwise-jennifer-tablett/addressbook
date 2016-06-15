@@ -124,12 +124,16 @@ create_containers('div','right_input_section_container_div',get_element('second_
     
     click_to_add_phone(); // click on add_phone and another container will pop up to add more info, eg. add home phone
     
-    create_containers('span','');
+    //create_containers('span','');
     
-    create_containers('input','note_container',get_element('input_container_13'));
+    create_containers('input','note_container',get_element('add_container_13'));
+    
     get_element('note_container').setAttribute('placeholder','Note');
     
-    /**delete phone container*/
-    delete_main_label_container();
-
+    /**create delete button for phone input*/
+    create_containers('div','phone_delete_button',get_element('label_and_input_right_container'));
+   get_element('phone_delete_button').textContent = 'Delete';
+   
+   click_phone_input();
     
+create_contact_card();

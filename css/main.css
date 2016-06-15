@@ -408,6 +408,17 @@ div[id^=chevron_container_]{
     font-size:1rem;
 }
 
+#phone_delete_button{
+    width: 15%;
+    height: 60%;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+    color: #0D7CE3;
+}
+
 #green_plus_container_2,
 #green_plus_container_3,
 #green_plus_container_4,
@@ -421,6 +432,149 @@ div[id^=chevron_container_]{
     padding-left: 35px;
 }
 
+/* ================================
+   4.0  Contact Card Display Screen
+   
+   ================================ */
+
+.blue{
+    color:#0D7CE3;
+}
+
+#top_row_chevron{
+    float:left;
+    position:relative;
+    top:30px;
+    left:20px;
+    font-size:3rem;
+}
+
+#all_contact{
+    color:#0D7CE3;
+    float:left;
+    position:relative;
+    top:30px;
+    left:30px;
+}
+
+#edit{
+    color:#0D7CE3;
+    float:right;
+    position:relative;
+    top: 30px;
+    right: 20px;
+
+}
+  /*  display none while working on search filter function  */
+.contact_cards{
+    background-color:#ffffff;
+    width:40rem;
+    height:871px;
+    text-align: center;
+    position: relative;
+    top: -874px;
+    box-shadow: 3px 3px 5px 3px grey;
+    font-size:2.5rem;
+    display:none;
+}
+
+
+
+#contact_card > div{
+    width:97%;
+    color:#0D7CE3;
+    text-align:left;
+    border-bottom: 1px solid #7E7D82;
+    float:right;
+}
+
+div#photo_and_name_container {
+    border-bottom: none;
+}
+
+#contact_card_top_row_container{
+    width:100%;
+    height:6.7rem;
+    font-size:2.2rem;
+    border-bottom: 1px solid #7E7D82;
+    background-color:#F7F7F7;
+    position: relative;
+    top: 0px;
+}
+
+#photo_container{
+    float:left;
+    height:10rem;
+    width:30%;
+}
+
+#name_container{
+    width:70%;
+    height:8rem;
+    font-size:2rem;
+    text-align: left;
+    padding-top: 50px;
+    color:black;
+}
+
+#photo_image{
+    background-color:#A9A9A9;
+    width:8rem;
+    height:8rem;
+    border-radius:100%;
+    position:relative;
+    top:10px;
+}
+
+#contact_card > div: nth-child(3){
+    text-align: left;
+    
+}
+
+#contact_card_home{
+    padding-left:10px;
+}
+
+#phone_number{
+    color:black;
+}
+
+#phone_fontawesome{
+    float:right;
+    padding-right: 20px;
+}
+
+#contact_card_note_container{
+    height:auto;
+}
+
+#contact_card_notes{
+    height:33px;
+    font-size:2.2rem;
+    width:96%;
+    resize: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    border:none;
+}
+
+#notes{
+    color:#BDBDBD;
+    width: 94%;
+}
+
+/* ===============================
+   5.0  Colors
+   
+   =============================== */
+
+/*
+#BDBDBD = lightgrey (Done Button)
+#0D7CE3 = iphone sky blue
+#A9A9A9 = chevron symbol grey
+#7E7D82 = lighter black
+#F7F7F7 = top_row_container grey
+*/
 
 
 /* ===============================
