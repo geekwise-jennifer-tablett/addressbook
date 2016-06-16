@@ -414,6 +414,7 @@ div[id^=phone_delete_button_]{
     height: 2rem;
     border-radius: 10px;
     border:1px solid red;
+    display:none;
 }
 
 #green_plus_container_2,

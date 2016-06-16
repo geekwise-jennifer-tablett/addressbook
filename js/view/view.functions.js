@@ -193,7 +193,7 @@ var click_to_add_phone = function(){
         		get_element('main_label_container_'+i).style.display = 'inline-block';
         		/**create delete button for phone input*/
                 create_containers('div','phone_delete_button_'+i,get_element('label_and_input_right_container_'+i));
-                get_element('phone_delete_button_'+i).style.overflow = 'hidden';
+                get_element('phone_delete_button_'+i).style.display = 'hidden';
                 
             }else if(click == i+10) {
                 
@@ -227,11 +227,11 @@ var click_to_add_phone = function(){
 var click_phone_input = function(){
        for (var i=0; i<1000; i++){
            get_element('phone_input_'+i).addEventListener('click', function(){
-            event.target.style.width = '25%';
-            
-            
+            //if(this.value.length = ''){}
+                event.target.style.width = '25%';
+          
             get_element('phone_delete_button_0').style.display = 'inline-block';
-           // get_element('phone_delete_button_0').style.display = 'inline-block';
+           
 
         });
        }
