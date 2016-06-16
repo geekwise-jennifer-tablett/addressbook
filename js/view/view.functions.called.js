@@ -123,17 +123,15 @@ create_containers('div','right_input_section_container_div',get_element('second_
     add_text_content(); // function to add text content for the add more info containers, eg. add phone
     
     click_to_add_phone(); // click on add_phone and another container will pop up to add more info, eg. add home phone
+       
+   click_phone_input();
     
     //create_containers('span','');
     
     create_containers('input','note_container',get_element('add_container_13'));
     
     get_element('note_container').setAttribute('placeholder','Note');
-    
-    /** testing to create delete button for phone input*/
-//     create_containers('div','phone_delete_button',get_element('add_other_info_container'));
-//   get_element('phone_delete_button').textContent = 'Delete';
-   
-   click_phone_input();
+ 
+
     
 create_contact_card();

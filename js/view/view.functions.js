@@ -192,9 +192,9 @@ var click_to_add_phone = function(){
             if(click == i+1){
         		get_element('main_label_container_'+i).style.display = 'inline-block';
         		/**create delete button for phone input*/
-                create_containers('div','phone_delete_button',get_element('label_and_input_right_container_'+i));
-                get_element('phone_delete_button').style.display = 'inline_block';
-                //get_element('phone_delete_button').textContent = 'Delete';
+                create_containers('div','phone_delete_button_'+i,get_element('label_and_input_right_container_'+i));
+                get_element('phone_delete_button_'+i).style.overflow = 'hidden';
+                
             }else if(click == i+10) {
                 
                 create_containers('div','infinite_container_'+i,get_element('add_more_info_container_0'));
@@ -224,16 +224,19 @@ var click_to_add_phone = function(){
     });
 };
 /**  when phone_number input field is clicked, it's width will decrease, float to left and display delete button*/
-// var click_phone_input = function(){
-//         get_element('phone_input').addEventListener('click', function(){
-//             get_element('phone_input_'+i).style.left = '13%';
+var click_phone_input = function(){
+       for (var i=0; i<1000; i++){
+           get_element('phone_input_'+i).addEventListener('click', function(){
+            event.target.style.width = '25%';
             
             
-            
-            
-//             get_element('phone_delete').style.display = 'inline-block';
-//         });
-//     };
+            get_element('phone_delete_button_0').style.display = 'inline-block';
+           // get_element('phone_delete_button_0').style.display = 'inline-block';
+
+        });
+       }
+        
+    };
 var adjust_textarea = function(){
     
     get_element('contact_card_notes').addEventListener('keyup',function(event){

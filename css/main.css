@@ -409,7 +409,7 @@ div[id^=chevron_container_]{
 }
 
 /*testing for delete button*/
-#phone_delete_button{
+div[id^=phone_delete_button_]{
     width: 2rem;
     height: 2rem;
     border-radius: 10px;
