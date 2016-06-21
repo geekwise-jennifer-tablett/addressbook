@@ -241,26 +241,58 @@ var click_to_add_phone = function(){
 
 //Blech, really hacky but works
 var click_phone_input = function(){
-    get_element('phone_input_0').addEventListener('click',function(){
-        event.target.style.width = '25%';
-        get_element('phone_delete_button_0').style.display = 'inline-block';
-    })
-     get_element('phone_input_1').addEventListener('click',function(){
-        event.target.style.width = '25%';
-        get_element('phone_delete_button_1').style.display = 'inline-block';
-    })
-     get_element('phone_input_2').addEventListener('click',function(){
-        event.target.style.width = '25%';
-        get_element('phone_delete_button_2').style.display = 'inline-block';
-    })
-     get_element('phone_input_3').addEventListener('click',function(){
-        event.target.style.width = '25%';
-        get_element('phone_delete_button_3').style.display = 'inline-block';
-    })
-     get_element('phone_input_4').addEventListener('click',function(){
-        event.target.style.width = '25%';
-        get_element('phone_delete_button_5').style.display = 'inline-block';
-    })
+    
+    
+    
+    for( var i = 0; i < document.getElementsByClassName('phone_input').length; i++ ){
+        var current_phone_input = get_element('phone_input_'+i);
+        current_phone_input.addEventListener('click',function(){
+            event.target.style.width = '25%';
+            event.target.nextElementSibling.style.display = 'inline-block';
+        })
+    };
+    
+    // get_element('phone_input_0').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_0').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_1').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_1').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_2').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_2').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_3').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_3').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_4').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_4').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_5').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_5').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_6').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_6').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_7').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_7').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_8').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_8').style.display = 'inline-block';
+    // })
+    //  get_element('phone_input_9').addEventListener('click',function(){
+    //     event.target.style.width = '25%';
+    //     get_element('phone_delete_button_9').style.display = 'inline-block';
+    // })
+    
 };
 
 //Dont look, this does NOT work
