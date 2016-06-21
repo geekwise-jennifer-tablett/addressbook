@@ -191,6 +191,7 @@ var click_to_add_phone = function(){
         for(var i=0; i<1000; i++){
             if(click == i+1){
         		get_element('main_label_container_'+i).style.display = 'inline-block';
+        	
         		/**create delete button for phone input*/
                 create_containers('div','phone_delete_button_'+i,get_element('label_and_input_right_container_'+i));
                 get_element('phone_delete_button_'+i).style.display = 'hidden';
@@ -205,7 +206,8 @@ var click_to_add_phone = function(){
                 create_containers('div','infinite_right_container_'+i,get_element('infinite_container_'+i));
                 
                 create_containers('input','infinite_phone_input_'+i,get_element('infinite_right_container_'+i));
-                
+               
+              
                 create_containers('div','infinite_minus_container_'+i,get_element('infinite_left_container_'+i));
                 create_containers('div','infinite_label_container_'+i,get_element('infinite_left_container_'+i));
                 create_containers('div','infinite_chevron_container_'+i,get_element('infinite_left_container_'+i));
@@ -224,25 +226,8 @@ var click_to_add_phone = function(){
     });
 };
 /**  when phone_number input field is clicked, it's width will decrease, float to left and display delete button*/
-//works for first one only
-// var click_phone_input = function(){
-//       for (var i=0; i<1000; i++){
-          
-//           get_element('phone_input_'+i).addEventListener('click', function(){
-        
-//                 event.target.style.width = '25%';
-          
-//               get_element('phone_delete_button_0').style.display = 'inline-block';
-            
-//              });
-//       }
-        
-//     };
 
-//Blech, really hacky but works
 var click_phone_input = function(){
-    
-    
     
     for( var i = 0; i < document.getElementsByClassName('phone_input').length; i++ ){
         var current_phone_input = get_element('phone_input_'+i);
@@ -252,61 +237,21 @@ var click_phone_input = function(){
         })
     };
     
-    // get_element('phone_input_0').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_0').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_1').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_1').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_2').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_2').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_3').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_3').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_4').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_4').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_5').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_5').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_6').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_6').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_7').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_7').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_8').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_8').style.display = 'inline-block';
-    // })
-    //  get_element('phone_input_9').addEventListener('click',function(){
-    //     event.target.style.width = '25%';
-    //     get_element('phone_delete_button_9').style.display = 'inline-block';
-    // })
     
 };
 
-//Dont look, this does NOT work
-// var parent_phone = document.querySelector('add_more_info_container_0');
-// parent_phone.addEventListener('click',function(event){});
-
-//     function phone_click(e){
-//         if(e.target !== e.currentTarget){
-//             var clicked_phone_input = e.target.id;
-//             event.target.style.width = '25%';
-//             //event.target.style.display = 'inline-block'
-//         }
-//         e.stopPropagation();
-//     };
+var click_phone_input_infinite = function(){
+    
+    for( var i = 0; i < document.getElementsByClassName('infinite_phone_input').length; i++ ){
+        var current_infinate_phone_input = get_element('infinite_phone_input_'+i);
+        current_infinate_phone_input.addEventListener('click',function(){
+            event.target.style.width = '25%';
+            event.target.nextElementSibling.style.display = 'inline-block';
+        })
+    };
+    
+    
+};
 
 
 var adjust_textarea = function(){
