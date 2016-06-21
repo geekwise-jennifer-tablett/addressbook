@@ -224,19 +224,59 @@ var click_to_add_phone = function(){
     });
 };
 /**  when phone_number input field is clicked, it's width will decrease, float to left and display delete button*/
-var click_phone_input = function(){
-       for (var i=0; i<1000; i++){
-           get_element('phone_input_'+i).addEventListener('click', function(){
-            //if(this.value.length = ''){}
-                event.target.style.width = '25%';
+//works for first one only
+// var click_phone_input = function(){
+//       for (var i=0; i<1000; i++){
           
-            get_element('phone_delete_button_0').style.display = 'inline-block';
-           
-
-        });
-       }
+//           get_element('phone_input_'+i).addEventListener('click', function(){
         
-    };
+//                 event.target.style.width = '25%';
+          
+//               get_element('phone_delete_button_0').style.display = 'inline-block';
+            
+//              });
+//       }
+        
+//     };
+
+//Blech, really hacky but works
+var click_phone_input = function(){
+    get_element('phone_input_0').addEventListener('click',function(){
+        event.target.style.width = '25%';
+        get_element('phone_delete_button_0').style.display = 'inline-block';
+    })
+     get_element('phone_input_1').addEventListener('click',function(){
+        event.target.style.width = '25%';
+        get_element('phone_delete_button_1').style.display = 'inline-block';
+    })
+     get_element('phone_input_2').addEventListener('click',function(){
+        event.target.style.width = '25%';
+        get_element('phone_delete_button_2').style.display = 'inline-block';
+    })
+     get_element('phone_input_3').addEventListener('click',function(){
+        event.target.style.width = '25%';
+        get_element('phone_delete_button_3').style.display = 'inline-block';
+    })
+     get_element('phone_input_4').addEventListener('click',function(){
+        event.target.style.width = '25%';
+        get_element('phone_delete_button_5').style.display = 'inline-block';
+    })
+};
+
+//Dont look, this does NOT work
+// var parent_phone = document.querySelector('add_more_info_container_0');
+// parent_phone.addEventListener('click',function(event){});
+
+//     function phone_click(e){
+//         if(e.target !== e.currentTarget){
+//             var clicked_phone_input = e.target.id;
+//             event.target.style.width = '25%';
+//             //event.target.style.display = 'inline-block'
+//         }
+//         e.stopPropagation();
+//     };
+
+
 var adjust_textarea = function(){
     
     get_element('contact_card_notes').addEventListener('keyup',function(event){

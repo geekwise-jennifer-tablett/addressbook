@@ -125,6 +125,7 @@ create_containers('div','right_input_section_container_div',get_element('second_
     click_to_add_phone(); // click on add_phone and another container will pop up to add more info, eg. add home phone
        
    click_phone_input();
+   
     
     //create_containers('span','');
     
