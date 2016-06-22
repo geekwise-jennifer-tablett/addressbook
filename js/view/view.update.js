@@ -119,6 +119,21 @@ search_field.addEventListener('click',function(event){
     
 });
 
+/**this code works on ks but not mine*/
+// var phone_input_delete = function(){
+//     get_element('label_container_0').addEventListener('click',function(){
+//         //if(get_element('phone_input_0').value.length > 0){
+//         //get_element('phone_input_0').value = null;
+//         get_element('phone_input_0').style.backgroundColor = 'blue';
+    
+//         //}
+//     });
+       
+// };
+
+//console.log('click!');
+
+
 
 
 

@@ -410,17 +410,20 @@ div[id^=chevron_container_]{
 
 /*testing for delete button*/
 div[id^=phone_delete_button_]{
-    /*width: 18px;
-    height: 18px;
-*/
+    position: relative;
+    left: 35px;
+    top:20px;
+    height:15px;
     display:none;
+    background-color:red;
+    z-index:10;
 }
 .fa-times-circle:before {
     content: "\f057";
     color: #A9A9A9;
     font-size: 17px;
     position: relative;
-    left: 35px;
+    top: -20px;
 }
 
 #green_plus_container_2,

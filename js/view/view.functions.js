@@ -329,3 +329,16 @@ var create_contact_card = function(){
     back_to(get_element('edit'),get_element('contact_card'),get_element('contact_container'),get_element('new_contact_container'));
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
