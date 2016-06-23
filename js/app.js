@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded',function(event){
     load('view/view.update.js',function() {
         update_contact(); // when DONE button is clicked
         click_on_first_name_field(); // Done button color change when first, last, and company fields are not empty
-        
     });
     
     load('view/view.scroll.js',function() {
@@ -75,9 +74,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         
     // });
     
-    // load('view/view.trying.new.functions.js',function(){
-    //     phone_input_delete();
-    // });
+    load('view/view.delete.phonenumber.js',function(){});
     
     
     
@@ -90,9 +87,5 @@ document.addEventListener('DOMContentLoaded',function(event){
     // });
     
 });
-
-
-
-
 
 

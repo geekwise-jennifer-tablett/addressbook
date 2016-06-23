@@ -6,6 +6,8 @@ var done_button = get_element('done_button');
 var update_contact = function(){
     done_button.addEventListener('click',function(event){
         
+        create_contact_card();
+        
         var first_name = first_name_field.value.length;
         var last_name = last_name_field.value.length;
         var company_name = company_name_field.value.length;
@@ -31,6 +33,12 @@ var update_contact = function(){
                 };
             };
             
+            if(get_element('phone_input_0').value.length >= 0){
+                new_contact_home_phone_number.push(get_element('phone_input_0').value);
+                get_element('phone_number').textContent = get_element('phone_input_0').value;
+                get_element('phone_input_0').value = null;
+            }
+            
             /**
              * for-loop: replace_array_item function calls for capitalize_first_letter function to replace
              * first letter of each word in string from an array, in this case it's the new_contact_array.
@@ -43,6 +51,20 @@ var update_contact = function(){
             };
             
             console.log(new_contact_array); // leave it for demo purposes, delete after
+            
+            /**
+             * After names in new_contact_array are capitalized, make them as text content displaying on the All Contact screen
+             * and on the Contact Card screen
+            */
+            
+            for(var i=0; i<new_contact_array.length; i++){
+                new_contact_container.textContent = new_contact_array[new_contact_array.length-1];
+                console.log(new_contact_array[new_contact_array.length-1]);
+                get_element('name_container').textContent = new_contact_array[new_contact_array.length-1];
+            };
+            
+            console.log(new_contact_array); // leave it for demo purposes, delete after
+            
             
             // display empty field after done is clicked
             first_name_field.value = null;
@@ -120,18 +142,18 @@ search_field.addEventListener('click',function(event){
 });
 
 /**this code works on ks but not mine*/
-// var phone_input_delete = function(){
-//     get_element('label_container_0').addEventListener('click',function(){
-//         //if(get_element('phone_input_0').value.length > 0){
-//         //get_element('phone_input_0').value = null;
-//         get_element('phone_input_0').style.backgroundColor = 'blue';
+var phone_input_delete = function(){
+    get_element('label_container_0').addEventListener('click',function(){
+        //if(get_element('phone_input_0').value.length > 0){
+        //get_element('phone_input_0').value = null;
+        get_element('phone_input_0').style.backgroundColor = 'blue';
     
-//         //}
-//     });
+        //}
+    });
        
-// };
+};
 
-//console.log('click!');
+console.log('click!');
 
 
 

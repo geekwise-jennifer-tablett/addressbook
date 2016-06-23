@@ -1,95 +1,32 @@
-  var onscroll=function(){
-    window.sticky_header();
+var sticky_header = function(){
+    
+    get_element('names_container').addEventListener('scroll',function(event){
+        
+        for( var i = 0; i < 26; i++ ) {
+            var current_header = get_element( 'letter_container_' + i );
+            var next_current_header = get_element('letter_container_' + (i+1) );
+            var current_header_top_position = current_header.getBoundingClientRect().top;
+            
+            // 181 = the number of pixels from the top of header to the top of document
+            // 237 = the number of pixels from the top of the next header to the top of document
+            
+            if ( current_header_top_position <= 181 ){
+                current_header.classList.add('fixed');
+                current_header.parentElement.classList.add('parent_margin_top');
+            } else {};
+        
+            if ( next_current_header.getBoundingClientRect().top <= 237 ) {
+                current_header.parentElement.classList.add('parent_relative');
+                current_header.classList.add('absolute');
+            } else {};
+            
+            if ( next_current_header.getBoundingClientRect().top < 181 ) {
+                current_header.classList.add('static');
+                current_header.parentElement.classList.add('parent_margin_top_two');
+            } else {};
+        };
+        
+    },false);
 };
 
-var sticky_header=function(){
-    var fixed_heads=document.getElementsByClassName('fixed_header');//look to make sure class is on kool's work
-    for(i=0;i<fixed_heads.length;i++){
-        var header=fixed_heads[i];
-        var next_header=fixed_heads[i+1];
-        var holder=getPrevNext(header)[0];
-        if(window.pageYOffset>findPosY(holder)){
-        
-        /**
-        *if the scroll position in the window is farther than the placeholder of the current headers position in the DOM
-        */
-            if(typeof next_header!='undefined'){
-                /**
-                *if this is not the last header
-                */
-          
-                var differance=findPosY(next_header)-window.pageYOffset;
-                /**
-                *the differance between the scroll position and the header placeholder position
-                */
-               
-                if(differance<header.offsetHeight){
-                    /**
-                    *push the current header up so the headers do not overlap
-                    */
-                   
-                    header.style.position="fixed";
-                    header.style.top='-'+(header.offsetHeight-differance)+'px';
-                    
-                }
-                else{
-                    /**
-                    *if the next header is not there
-                    */
-                    
-                    holder.style.height=header.offsetHeight+'px';
-                    header.style.position="fixed";
-                    header.style.top="181px";
-                }
-                
-            }
-             
-            else{
-                                    
-                holder.style.height=header.offsetHeight+'px';
-                
-                header.style.position="fixed";
-                header.style.top="0px";
-            }
-           
-            
-        }
-        else{
-            holder.style.height='0px';
-            
-            header.style.position='static';
-            header.style.removeProperty('top');
-        }
-        
-    }
-};
-/**
-*grab the header in the placeholder and the next header,privious header
-*/
-function getPrevNext(el){
-    var els=document.getElementsByTagName('*');
-    for(j=0;j<els.length;j++){
-        if(els[j]==el){
-            return [els[j-1],els[j+1]];
-        }
-    }
-    return false;
-}
-
-
-
-  function findPosY(obj)
-  {
-    var curtop = 0;
-    if(obj.offsetParent)
-        while(1)
-        {
-          curtop += obj.offsetTop;
-          if(!obj.offsetParent)
-            break;
-          obj = obj.offsetParent;
-        }
-    else if(obj.y)
-        curtop += obj.y;
-    return curtop;
-  };
+sticky_header();

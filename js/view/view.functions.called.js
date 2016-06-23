@@ -135,4 +135,3 @@ create_containers('div','right_input_section_container_div',get_element('second_
  
 
     
-create_contact_card();

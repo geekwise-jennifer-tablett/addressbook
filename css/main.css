@@ -71,9 +71,8 @@ input{
     font-size:2.2rem;
     border-bottom: 1px solid #7E7D82;
     background-color:#F7F7F7;
-    position:fixed;
+    position:absolute;
     left:0;
-    z-index: 1
 }
 
 #top_row_container > span{
@@ -595,3 +594,38 @@ div#photo_and_name_container {
 #0D7CE3 = iphone sky blue
 
 */
+/*===================================== scroll feature ======================================*/
+
+
+.fixed{
+    position:fixed;
+    top:181px;
+    width:565px;
+}
+
+.parent_margin_top{
+    margin-top: 55px;
+}
+
+.parent_margin_top_two{
+    margin-top:0;
+}
+
+.absolute{
+    position:absolute;
+    top:38px;
+    width:100%;
+}
+
+.parent_fixed{
+    position:fixed;
+}
+
+.parent_relative{
+    position:relative;
+}
+
+.static{
+    position: static;
+}
+
